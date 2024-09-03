@@ -1,12 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
-/* 
+.traffic-light {
+    width: 100px; /* Tamaño base del semáforo */
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.light {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 0;
+    padding-bottom: 100%; /* Mantiene la proporción cuadrada */
+    margin: 10px 0; /* Espacio entre luces */
+    border-radius: 50%;
+    transition: box-shadow 0.3s;
+}
 
-*/
+.light.red {
+    background-color: red;
+    opacity: 0.3; /* Baja opacidad para luces apagadas */
+}
+
+.light.yellow {
+    background-color: yellow;
+    opacity: 0.3; /* Baja opacidad para luces apagadas */
+}
+
+.light.green {
+    background-color: green;
+    opacity: 0.3; /* Baja opacidad para luces apagadas */
+}
+
+.light.selected {
+    opacity: 1; /* Plena opacidad para la luz seleccionada */
+    box-shadow: 0 0 30px 10px white;
+}
+
+.container {
+    width: 100%;
+    max-width: 200px; /* Ancho máximo para el semáforo */
+}
+
+.light.purple {
+    background-color: purple;
+    opacity: 0.3; /* Baja opacidad para luces apagadas */
+}
+
+.light.purple.selected {
+    opacity: 1;
+    box-shadow: 0 0 30px 10px white;
+}
